@@ -1,0 +1,223 @@
+body {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.board {
+  width: 400px;
+  height: 400px;
+  margin: 50px auto 0;
+
+  display: flex;
+  flex-flow: row wrap;
+
+  background-color: #ccc;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  outline: 1px solid #fff;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.cell:hover:not(.clear) {
+  opacity: 0.4;
+  background-color: red;
+}
+
+.cell:active {
+  outline: 1px solid #000;
+  opacity: 0.7;
+  box-shadow: inset 0px 0px 5px #321708,
+    inset 0px 0px 2px red;
+}
+
+
+.bomb {
+  /* background-color: rgb(255, 123, 0); */
+}
+
+.clear {
+  background: #f0f0f0;
+  box-shadow: inset 0px 0px 4px #6a6a6a;
+}
+
+.controls {
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+}
+
+.controls .start {
+  padding: 5px 10px;
+  color: #fff;
+  background: linear-gradient(45deg, red, blue);
+  border: none;
+  border-radius: 5px;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.bombsLeft {
+  position: absolute;
+  top: 10px;
+  text-transform: uppercase;
+}
+
+.one {
+  color: blue;
+}
+
+.two {
+  color: orange;
+}
+
+.three {
+  color: chocolate;
+}
+
+.four {
+  color: skyblue;
+}
+
+.five {
+  color: wheat;
+}
+
+.six {
+  color: gold;
+}
+
+.seven {
+  color: firebrick;
+}
+
+.eight {
+  color: palevioletred;
+}
+
+.container {
+  /* width: 500px; */
+  /* align-content: center; */
+}
+
+.grid {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #dcd6bc;
+  border: 10px solid #dcd6bc;
+  margin: 20px auto auto;
+}
+
+.grid.normal {
+  width: 480px;
+  height: 480px;
+}
+.grid.pro {
+  width: 600px;
+  height: 600px;
+}
+
+.grid.normal .valid,
+.grid.normal .checked,
+.grid.normal .bomb,
+.grid.pro .valid,
+.grid.pro .checked,
+.grid.pro .bomb {
+  width: 30px;
+  height: 30px;
+}
+
+div {
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+.valid {
+  height: 40px;
+  width: 40px;
+  border: 5px solid;
+  border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+  box-sizing: border-box;
+}
+
+.checked {
+  height: 40px;
+  width: 40px;
+  border: 2px solid;
+  background-color: #cecab7;
+  border-color: #9c998d;
+  box-sizing: border-box;
+}
+
+.bomb {
+  height: 40px;
+  width: 40px;
+  border: 5px solid;
+  border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+  box-sizing: border-box;
+}
+
+.one {
+  color: #e76346;
+}
+
+.two {
+  color: #4199d3;
+}
+
+.three {
+  color: #57da59;
+}
+
+.four {
+  color: #bb41d3;
+}
+
+.five {
+  color: #bd0404;
+}
+.six {
+  color: #1c77ff;
+}
+.seven {
+  color: #e7d746;
+}
+.eight {
+  color: #383838;
+}
+
+.result {
+  margin-top: 5px;
+  color: #e76346;
+  font-size: 26px;
+  height: 50px;
+}
+
+.restart {
+  display: none;
+  font-size: 20px;
+  border: 1px solid #e76346;
+  border-radius: 8px;
+  padding: 1rem 1.3rem;
+  width: 150px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.restart.active {
+  display: block
+}
